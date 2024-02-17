@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "9402b477-5b46-4423-a987-e3fe37607892",
+		"name": "Note",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27234134",
+		"_collection_link": "https://solar-spaceship-767970.postman.co/workspace/My-Workspace~4f744964-4548-40d6-8dff-ad62be94a2fa/collection/27234134-9402b477-5b46-4423-a987-e3fe37607892?action=share&source=collection_link&creator=27234134"
+	},
+	"item": [
+		{
+			"name": "Create Note",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"title1\",\n    \"body\": \"body1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/notes",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Notes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/notes",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Note",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/notes/604d0e8a-670b-4159-9208-8c808757bbec",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"notes",
+						"604d0e8a-670b-4159-9208-8c808757bbec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Note",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"body\": \"body2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/notes/604d0e8a-670b-4159-9208-8c808757bbec",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"notes",
+						"604d0e8a-670b-4159-9208-8c808757bbec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Note",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/notes/604d0e8a-670b-4159-9208-8c808757bbec",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"notes",
+						"604d0e8a-670b-4159-9208-8c808757bbec"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

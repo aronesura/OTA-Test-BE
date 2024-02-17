@@ -6,19 +6,16 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity()
-export class User {
-  @PrimaryGeneratedColumn()
-  id: number;
+@Entity('notes')
+export class Note {
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Column()
-  firstName: string;
+  title: string;
 
   @Column()
-  lastName: string;
-
-  @Column()
-  age: number;
+  body: string;
 
   @CreateDateColumn()
   createdAt: Date;

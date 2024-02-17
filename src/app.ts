@@ -6,6 +6,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 
 import { connectDB } from './data-source';
+import Routes from './routes';
 
 class App {
   private app: Application;
@@ -36,9 +37,15 @@ class App {
   }
 
   private initialiseRoutes(): void {
-    this.app.get('/', async (req: Request, res: Response): Promise<Response> => res.status(200).send({
-        message: 'Hello World!',
-      }));
+    this.app.get(
+      '/',
+      async (req: Request, res: Response): Promise<Response> =>
+        res.status(200).send({
+          message: 'Hello World!',
+        }),
+    );
+
+    new Routes(this.app);
   }
 
   private initialiseDatabaseConnection(): void {
